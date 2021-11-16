@@ -1,0 +1,36 @@
+--|--|--Introduction of client--|--|--
+I am a big businessman and industrialist. I have many companies that include an automobile company, a pharmaceutical company and a IT farm. As I own many business's
+I need to be organized and maintain a schedule and I also have to figure out some time for personal care such as exercising or resting. I need an efficient system to manage my routine and
+organizing my daily life.
+
+--|--|--Requirement Gathering Phase--|--|--
+System : Life planner or schedule management system
+User : Business Owner
+
+**What type of system do you prefer? Do you want to use this system only on your smart phone or do you want an web application which you can use on any device?**
+Ans : Mobile application.
+
+**Can you please elaborate what you mean by organizing your your work?**
+Ans :
+1. I want to add an activity to my daily schedule.
+2. I want the system to prompt me if there are any time clashes between activities or any other errors.
+3. I want the system to give me suggestions on how to handle the time clashes or errors in my schedule.
+4. I want to be able to set reminders for eating, drinking water or resting after a certain amount of durations during a whole day.
+5. I want to set up custom routines for exercise.
+6. I want to save some activities or exercises to reuse them.
+
+**How would you want to set up your schedule and enter the activities?**
+Ans : I want to just enter the description of the activity and the start time and the duration or end time. Also I want the system to sort the activities chronologically and make a schedule.
+
+**Could you tell me how what kind of suggestions you want the system to give you in the event of a time clash between two activities?**
+Ans : The system should prompt me weather I want to keep only one activity or merge the both and make a joined activity.
+
+**How do you want the reminders to work?**
+Ans : I want to to set a reminder for a specific task and want the system to notify me when it's time.
+
+**How dow you want to set up the routine for exercising?**
+Ans : I want to create and add my own exercises or add existing ones if possible and I want to set different time durations and sets for each of them.
+
+**Do you have any server to save your data or want to purchuase one? Or would you want to take a server hosting service?**
+**Explain what a server is and the differance between creating one from scratch and taking a hosting service.**
+Ans : I think taking a hosting will be the better option for me.
