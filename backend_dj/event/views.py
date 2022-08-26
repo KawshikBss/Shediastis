@@ -50,3 +50,21 @@ def single_user_single_event(request, event_pk, user_pk):
     event = Event.objects.get(id=event_pk, user=user_pk)
     data = EventSerializer(event)
     return Response(data.data)
+
+@api_view(['GET'])
+def single_user_completed_events(request, pk):
+    events = Event.objects.filter(user=pk, completed=True)
+    data = EventSerializer(events, many=True)
+    return Response(data.data)
+    
+@api_view(['GET'])
+def single_user_missed_events(request, pk):
+    events = Event.objects.filter(user=pk, missed=True)
+    data = EventSerializer(events, many=True)
+    return Response(data.data)
+    
+@api_view(['GET'])
+def single_user_active_events(request, pk):
+    events = Event.objects.filter(user=pk, active=True)
+    data = EventSerializer(events, many=True)
+    return Response(data.data)
