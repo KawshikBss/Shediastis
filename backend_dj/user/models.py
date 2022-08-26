@@ -12,4 +12,4 @@ class User(models.Model):
     verified = models.BooleanField(default=False, null=True, blank=True)
     admin = models.BooleanField(default=False, null=True, blank=True)
     active = models.BooleanField(default=False, null=True, blank=True)
-    created = models.DateTimeField(auto_now_add=True, editable=False, null=False, blank=False)
+    created = models.DateTimeField(auto_now_add=True, null=False, blank=False, editable=False)
