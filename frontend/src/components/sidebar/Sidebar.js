@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React, { useState } from 'react'
 import SidebarLinkGroup from './SidebarLinkGroup'
-import SidebarLink from './SidebarLink'
+import SidebarLogo from './SidebarLogo'
 
 function Sidebar() {
     const [extended, setExtended] = useState(false);
@@ -17,13 +17,8 @@ function Sidebar() {
         onMouseEnter={extendSidebar}
         onMouseLeave={collapseSidebar}
         >
-            <SidebarLink route=''>
-                Shediastis
-            </SidebarLink>
+            <SidebarLogo route={'/'} extended={extended} />
             <SidebarLinkGroup extended={extended} />
-            <SidebarLink route=''>
-                Settings
-            </SidebarLink>
         </StyledSidebar>
     )
 }
