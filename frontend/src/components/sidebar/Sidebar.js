@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import React, { useState } from 'react'
 import SidebarLinkGroup from './SidebarLinkGroup'
 import SidebarLogo from './SidebarLogo'
+import SettingsLink from './SettingsLink'
+import { FiSettings } from 'react-icons/fi'
 
 function Sidebar() {
     const [extended, setExtended] = useState(false);
@@ -19,6 +21,10 @@ function Sidebar() {
         >
             <SidebarLogo route={'/'} extended={extended} />
             <SidebarLinkGroup extended={extended} />
+            <SettingsLink route={'/'} icon={FiSettings}>
+                <FiSettings />
+                {(extended)? 'Settings': ''}
+            </SettingsLink>
         </StyledSidebar>
     )
 }
@@ -26,11 +32,12 @@ function Sidebar() {
 const StyledSidebar = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: space-between;
-align-items: flext-start;
+justify-content: space-around;
+align-items: center;
 width: fit-content;
 height: 100vh;
 background-color: #6C63FF;
+background-image: linear-gradient(15deg, cornflowerblue, #6C63FF);
 border-radius: 0 0 20px 0;
 `
 

@@ -1,7 +1,7 @@
-import styled from "styled-components"
 import React from 'react'
+import styled from 'styled-components'
 
-function SidebarLink({ children, route, active }) {
+function SettingsLink( { children, route, active } ) {
   return (
     <StyledLink href={ route } active={ active }>
         { children }
@@ -11,7 +11,7 @@ function SidebarLink({ children, route, active }) {
 
 const StyledLink = styled.a`
 display: flex;
-flex-direction: row;
+justify-content: center;
 align-items: center;
 text-decoration: none;
 font-size: 18px;
@@ -29,4 +29,4 @@ cursor: pointer;
     }
 `
 
-export default SidebarLink
+export default SettingsLink
