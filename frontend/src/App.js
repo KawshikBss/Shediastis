@@ -1,9 +1,9 @@
-import Sidebar from "./components/sidebar/Sidebar";
+import Container from "./components/Container";
 
 function App() {
   return (
     <div className="App">
-      <Sidebar />
+      <Container />
     </div>
   );
 }
