@@ -15,7 +15,6 @@ flex-direction: row;
 align-items: center;
 text-decoration: none;
 font-size: 18px;
-width: fit-content;
 height: 20px;
 color: ${props => props.active? '#6C63FF': 'rgba(23, 23, 23, 50%)'};
 background-color: ${props => props.active? '#232323': 'transparent'};

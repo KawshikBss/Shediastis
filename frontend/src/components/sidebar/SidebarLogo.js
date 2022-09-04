@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function SidebarLogo({ route, extended }) {
   return (
     <StyledLogo href={ route }>
-        <LogoImage src={ 'Logo.png' } />
+        <LogoImage src={ 'Logo.png' } extended={extended} />
         {
             (extended)?
             (<LogoText>
