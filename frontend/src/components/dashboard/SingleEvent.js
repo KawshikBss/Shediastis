@@ -39,7 +39,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-margin: 10px 20px;
+margin: 6px 20px;
 gap: 20px;
 `
 

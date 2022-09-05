@@ -11,7 +11,6 @@ function Dashboard() {
 }
 
 const StyledDash = styled.div`
-
 `
 
 export default Dashboard
