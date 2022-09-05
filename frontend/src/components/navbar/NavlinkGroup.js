@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import ProfileLink from './ProfileLink'
+import Navlink from './Navlink'
+import { AiFillCaretDown } from 'react-icons/ai'
 
 function NavlinkGroup() {
   return (
     <StyledLinkGroup>
-        <div>NavlinkGroup</div>
-        <ProfileLink />
-        <div>NavlinkGroup</div>
+        <ProfileLink username={ 'Elon Musk' } />
+        <Navlink>
+          <AiFillCaretDown />
+        </Navlink>
     </StyledLinkGroup>
   )
 }
