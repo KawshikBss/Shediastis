@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaBars, FaTrashAlt } from 'react-icons/fa'
 
-function SingleEvent({ children, completed, missed }) {
+function SingleEvent({ children, completed, missed, dueTime }) {
   return (
     <Event>
         <EventInfoContainer>
@@ -19,7 +19,7 @@ function SingleEvent({ children, completed, missed }) {
                 </EventText>
             </InfoText>
             <InfoTime>
-                9:30 AM
+                { dueTime }
             </InfoTime>
         </EventInfoContainer>
         <EventActionsContainer>

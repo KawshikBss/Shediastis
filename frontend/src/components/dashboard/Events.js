@@ -2,8 +2,25 @@ import React from 'react'
 import styled from 'styled-components'
 import { AiFillPlusCircle } from 'react-icons/ai'
 import SingleEvent from './SingleEvent'
+import {
+  getEvents,
+  getSingleEvent,
+  addEvent,
+  deleteEvent,
+} from '../../api/EventRequests'
+import {
+  useQuery,
+  useMutation,
+} from 'react-query'
 
 function Events() {
+  const {
+    isLoading,
+    isError,
+    error,
+    data: events
+  } = useQuery('events', getEvents)
+
   return (
     <Container>
       <EventsHeader>
@@ -13,27 +30,21 @@ function Events() {
         </EventBtn>
       </EventsHeader>
       <StyledEvents>
-        <SingleEvent>
-          Event
-        </SingleEvent>
-        <SingleEvent>
-          Event
-        </SingleEvent>
-        <SingleEvent missed>
-          Event
-        </SingleEvent>
-        <SingleEvent completed>
-          Event
-        </SingleEvent>
-        <SingleEvent>
-          Event
-        </SingleEvent>
-        <SingleEvent missed>
-          Event
-        </SingleEvent>
-        <SingleEvent completed>
-          Event
-        </SingleEvent>
+        {
+          (isLoading)?
+            (<h6>Loading...</h6>):
+          (isError)?
+            (<h6>{ error }</h6>):
+          events.map(event => {
+            return (<SingleEvent
+              completed={ event.completed }
+              missed={ event.missed }
+              dueTime={ '9:30AM' }
+            >
+              { event.description }
+            </SingleEvent>)
+          })
+        }
       </StyledEvents>
     </Container>
   )
