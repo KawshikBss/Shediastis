@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { AiOutlineSync } from 'react-icons/ai';
 
 const eventRequests = axios.create({
     baseURL: 'http://127.0.0.1:8000/'
@@ -20,7 +21,12 @@ export const addEvent = async (event) => {
 };
 
 export const deleteEvent = async (eventId) => {
-    const response = await eventRequests.get(`events-delete/${ eventId }/`);
+    const response = await eventRequests.delete(`events-delete/${ eventId }`);
+    return response.data;
+};
+
+export const setCompletedEvent = async (eventId) => {
+    const response = await eventRequests.put(`events-set-completed/${ eventId }`);
     return response.data;
 };
 
