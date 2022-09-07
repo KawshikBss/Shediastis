@@ -39,6 +39,22 @@ def delete_event(request, pk):
         event.delete()
     return Response({"message": "DELETED"})
 
+
+@api_view(['PUT'])
+def set_completed_event(request, pk):
+    event = Event.objects.get(id=pk)
+    if event:
+        if event.completed:
+            event.completed = False
+            event.missed = False
+            event.active = True
+        else:
+            event.completed = True
+            event.missed = False
+            event.active = False
+        event.save()
+    return Response({"message": "Completed"})
+
 @api_view(['GET'])
 def single_user_all_events(request, pk):
     events = Event.objects.filter(user=pk)

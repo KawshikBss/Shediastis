@@ -8,6 +8,7 @@ urlpatterns = [
     path('events-add/', views.add_event),
     path('events-update/<str:pk>', views.update_event),
     path('events-delete/<str:pk>', views.delete_event),
+    path('events-set-completed/<str:pk>', views.set_completed_event),
     path('events-user-all/<str:pk>', views.single_user_all_events),
     path('events-user-single/<str:event_pk>/<str:user_pk>', views.single_user_single_event),
     path('events-user-completed/<str:pk>', views.single_user_completed_events),

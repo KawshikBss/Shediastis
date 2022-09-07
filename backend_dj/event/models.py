@@ -14,3 +14,9 @@ class Event(models.Model):
     active = models.BooleanField(default=True, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, null=False, blank=False, editable=False)
     due = models.DateTimeField(auto_now_add=True, null=False, blank=False, editable=True)
+
+    @property
+    def set_completed(self):
+        self.completed = True
+        self.missed = False
+        self.active = False
