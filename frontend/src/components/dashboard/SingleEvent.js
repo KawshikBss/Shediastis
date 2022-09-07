@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaBars, FaTrashAlt } from 'react-icons/fa'
 
-function SingleEvent({ children, completed, missed, dueTime }) {
+function SingleEvent({ children, completed, missed, dueTime, deleteAction, setCompletedAction }) {
   return (
     <Event>
         <EventInfoContainer>
             <InfoText>
                 <EventCheckbox
+                    onClick={ setCompletedAction }
                     completed={ completed }
                     missed={ missed }
                 />
@@ -26,7 +27,7 @@ function SingleEvent({ children, completed, missed, dueTime }) {
             <EventActions>
                 <FaBars />
             </EventActions>
-            <EventActions>
+            <EventActions onClick={ deleteAction }>
                 <FaTrashAlt />
             </EventActions>
         </EventActionsContainer>
